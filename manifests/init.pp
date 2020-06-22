@@ -37,7 +37,7 @@
 # @example
 #   include profile_sudo
 class profile_sudo  (
-  Hash $configs,
+  Hash            $configs,
   Array[ String ] $users,
   Array[ String ] $groups,
 ) {
@@ -52,7 +52,7 @@ class profile_sudo  (
   $groups.each |String $group, String $value| {
     $snippet = $value ? {
       String[1] => $value,
-      default   => "ALL=(ALL) NOPASSWD: ALL",
+      default   => 'ALL=(ALL) NOPASSWD: ALL',
     }
     sudo::conf { "sudo for group ${group}":
       content  => "%${group} ${snippet}",
@@ -69,7 +69,7 @@ class profile_sudo  (
   $users.each |String $user, String $value| {
     $snippet = $value ? {
       String[1] => $value,
-      default   => "ALL=(ALL) NOPASSWD: ALL",
+      default   => 'ALL=(ALL) NOPASSWD: ALL',
     }
     sudo::conf { "sudo for user ${user}":
       content  => "%${user} ${snippet}",
