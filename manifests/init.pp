@@ -37,15 +37,16 @@
 # @example
 #   include profile_sudo
 class profile_sudo  (
-  Hash            $configs,
-  Array[ String ] $users,
-  Array[ String ] $groups,
+  Hash $configs,
+  Hash $users,
+  Hash $groups,
 ) {
 
   class { 'sudo' :
     config_file_replace => true,
     purge               => true,
     configs             => $configs,
+    content             => 'profile_sudo/sudoers.erb',
   }
 
   # ALLOW GROUPS
