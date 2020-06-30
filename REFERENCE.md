@@ -34,7 +34,7 @@ Default: (see data-in-module)
 
 ##### `users`
 
-Data type: `Array[ String ]`
+Data type: `Hash`
 
 Hash where key is username and value is "content"
 where content is a string appropriate for sudo::conf.
@@ -62,7 +62,7 @@ See also: https://forge.puppet.com/saz/sudo
 
 ##### `groups`
 
-Data type: `Array[ String ]`
+Data type: `Hash`
 
 Same as `users` (above) but where hash key is a groupname.
 

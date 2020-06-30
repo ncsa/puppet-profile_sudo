@@ -8,8 +8,8 @@ NCSA Common Puppet Profiles - Sudo and Sudoers config
 ## Reference
 
 ### class profile_sudo  (
--  Hash            $configs,
--  Array[ String ] $users,
--  Array[ String ] $groups,
- 
+-  Hash $configs,
+-  Hash $users,
+-  Hash $groups,
+
 See also: [REFERENCE.md](REFERENCE.md)
