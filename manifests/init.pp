@@ -50,7 +50,7 @@ class profile_sudo  (
   }
 
   # ALLOW GROUPS
-  $groups.each |String $group, String $value| {
+  $groups.each |$group, $value| {
     $snippet = $value ? {
       String[1] => $value,
       default   => 'ALL=(ALL) NOPASSWD: ALL',
@@ -67,7 +67,7 @@ class profile_sudo  (
   }
 
   # ALLOW USERS
-  $users.each |String $user, String $value| {
+  $users.each |$user, $value| {
     $snippet = $value ? {
       String[1] => $value,
       default   => 'ALL=(ALL) NOPASSWD: ALL',
