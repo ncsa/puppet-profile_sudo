@@ -1,4 +1,7 @@
 # profile_sudo
+
+![pdk-validate](https://github.com/ncsa/puppet-profile_sudo/workflows/pdk-validate/badge.svg)
+![yamllint](https://github.com/ncsa/puppet-profile_sudo/workflows/yamllint/badge.svg)
  
 NCSA Common Puppet Profiles - Sudo and Sudoers config
  
