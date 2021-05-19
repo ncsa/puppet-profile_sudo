@@ -73,7 +73,7 @@ class profile_sudo  (
       default   => 'ALL=(ALL) NOPASSWD: ALL',
     }
     sudo::conf { "sudo for user ${user}":
-      content  => "%${user} ${snippet}",
+      content  => "${user} ${snippet}",
     }
     pam_access::entry { "Allow sudo for user ${user}":
       user       => $user,
